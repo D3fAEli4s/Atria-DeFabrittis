@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;1,700&display=swap');
+
+* {
+    font-family: 'Prompt', sans-serif;
+    padding: 0;
+    margin: 0; }
+
+p , a {
+    color: #fff;
+    font-size: 1.1em; }
+
+.navHeader {
+    background-color: #D9BDAD;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+    .navHeader .ulNav {
+        display: flex; }
+
+        .navHeader .ulNav > li {
+            margin: 1em;
+            list-style: none; }
+
+            .navHeader .ulNav li a { 
+                text-decoration: none; }
+
+#carrito {
+    background-color:#D9BDAD;
+    border: none;
+    font-size: 1em;
+}
+
+    #carrito > a {
+        text-decoration: none;
+    }
+
