@@ -1,37 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;700&display=swap');
 
 * {
-    font-family: 'Prompt', sans-serif;
+    font-family: 'Gaegu', cursive;
     padding: 0;
-    margin: 0; }
+    margin: 0; 
+    box-sizing: border-box;
+}
 
-p , a {
+p , a{
     color: #fff;
-    font-size: 1.1em; }
+    font-size: 1.4em; 
+}
 
 .navHeader {
-    background-color: #D9BDAD;
+    background-color: #73726F;
     display: flex;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center; 
+}
 
     .navHeader .ulNav {
-        display: flex; }
+        display: flex;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
 
         .navHeader .ulNav > li {
             margin: 1em;
-            list-style: none; }
+            list-style: none;
+        }
 
             .navHeader .ulNav li a { 
-                text-decoration: none; }
+                text-decoration: none;
+                color: #d3d3d3;
+                position: relative;
+                letter-spacing: 0.5px;
+                padding: 0 10px;
+                font-size: 1.7em;
+            }
 
-#carrito {
-    background-color:#D9BDAD;
-    border: none;
-    font-size: 1em;
+a::after {
+    content: "";
+    position: absolute;
+    background-color: #e4ae7e;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
 }
 
-    #carrito > a {
-        text-decoration: none;
-    }
+.ulNav li a:hover {
+    color: #ffffff;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.atriaLogo {
+    width: 225px;
+}
+
+
+
 
