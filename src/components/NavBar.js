@@ -1,8 +1,8 @@
 import CardWidget from "./CardWidget";
 
-const NavBar = (parametros) => {
+const NavBar = ({type}) => {
 
-    if(parametros.type == "header"){
+    if(type == "header"){
       return (
         <nav className="navHeader">
             <a href="#">

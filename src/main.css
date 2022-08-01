@@ -8,8 +8,8 @@
 }
 
 p , a{
-    color: #fff;
-    font-size: 1.4em; 
+    color: #000;
+    font-size: 1.4em;
 }
 
 .navHeader {
@@ -62,6 +62,20 @@ a:hover::after {
     width: 225px;
 }
 
+.cardProductos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.cardContador {
+    text-align: center;
+}
 
+.contenedorContador {
+    border: solid rgb(228, 219, 219) 1px;
+    border-radius: 4px;
+    padding-top: 7px;
+}
 
