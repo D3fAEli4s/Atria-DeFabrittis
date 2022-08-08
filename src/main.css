@@ -14,9 +14,10 @@ p , a{
 
 .navHeader {
     background-color: #73726F;
+    box-shadow: 0.0.5em 1em rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
 }
 
     .navHeader .ulNav {
@@ -30,16 +31,16 @@ p , a{
             list-style: none;
         }
 
-            .navHeader .ulNav li a { 
-                text-decoration: none;
-                color: #d3d3d3;
-                position: relative;
-                letter-spacing: 0.5px;
-                padding: 0 10px;
-                font-size: 1.7em;
-            }
+.enlacesNavBar {
+    text-decoration: none;
+    color: #d3d3d3;
+    position: relative;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    font-size: 1.7em;
+}
 
-a::after {
+.enlacesNavBar::after {
     content: "";
     position: absolute;
     background-color: #e4ae7e;
@@ -50,32 +51,14 @@ a::after {
     transition: 0.3s;
 }
 
-.ulNav li a:hover {
+.enlacesNavBar:hover {
     color: #ffffff;
 }
 
-a:hover::after {
+.enlacesNavBar:hover::after {
     width: 100%;
 }
 
 .atriaLogo {
     width: 225px;
 }
-
-.cardProductos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.cardContador {
-    text-align: center;
-}
-
-.contenedorContador {
-    border: solid rgb(228, 219, 219) 1px;
-    border-radius: 4px;
-    padding-top: 7px;
-}
-

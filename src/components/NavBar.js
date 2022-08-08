@@ -10,13 +10,13 @@ const NavBar = ({type}) => {
             </a>
             <ul className="ulNav">
                 <li>
-                    <a href="#">Inicio</a>
+                    <a href="#" className="enlacesNavBar">Inicio</a>
                 </li>
                 <li>
-                    <a href="#">Tienda</a>
+                    <a href="#" className="enlacesNavBar">Tienda</a>
                 </li>
                 <li>
-                    <a href="#">Contacto</a>
+                    <a href="#" className="enlacesNavBar">Contacto</a>
                 </li>
             </ul>
             <CardWidget/>
@@ -27,13 +27,13 @@ const NavBar = ({type}) => {
         <nav className="navHeader">
             <ul className="ulNav">
                 <li>
-                    <a href="#">Inicio</a>
+                    <a href="#" className="enlacesNavBar">Inicio</a>
                 </li>
                 <li>
-                    <a href="#">Tienda</a>
+                    <a href="#" className="enlacesNavBar">Tienda</a>
                 </li>
                 <li>
-                    <a href="#">Contacto</a>
+                    <a href="#" className="enlacesNavBar">Contacto</a>
                 </li>
             </ul>
         </nav>
