@@ -1,5 +1,6 @@
 import ItemListContainer from "./ItemListContainer";
 import NavBar from "./NavBar"
+import { ItemDetailContainer } from "./ItemDetailContainer";
 
 const Header = () => {
     return (
@@ -8,7 +9,8 @@ const Header = () => {
                 <NavBar
                     type="header"
                 />
-                <ItemListContainer test={true} nombre="D3fa"/>
+                <ItemListContainer test={true} nombre="Alguien"/>
+                <ItemDetailContainer/>
             </header>
         </>
     )

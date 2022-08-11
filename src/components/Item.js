@@ -8,7 +8,7 @@ const Item = ({ product }) => {
             <div className="card-body text-center">
                 {product.product} 
                 <br />
-                <a href="#" class="btn btn-primary w-25 my-3">Ver Detalle Del Producto</a>
+                <a href="#" className="btn btn-primary w-25 my-3">Ver Detalle Del Producto</a>
                 <br />
                 <p>Stock: {product.stock}</p> 
             </div>

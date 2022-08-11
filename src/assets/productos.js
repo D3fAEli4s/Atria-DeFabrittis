@@ -4,8 +4,8 @@ export const products = [
         image: "https://juleriaque.vteximg.com.br/arquivos/ids/156281-1000-1000/black-xs-edt-F9CFC21F572408E67A560098A99E23F3.jpg?v=637336333836500000",
         product: "PACO RABANNE BLACK XS",
         category: "Paco Rabanne",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 18.250,
+        description: "La fragancia de Paco Rabanne nos brinda una inyección de insolencia y provocación, un aura de viribilidad y transgresión. Una fragancia oriental amaderada que mezcla el contraste entre la refrescante acidez del limón y la dulzura golosa del praliné empapado en pachuli. Las Notas de Salida son salvia y limón (lima ácida); las Notas de Corazón son bálsamo de Tolú, cardamomo negro, canela y praliné; las Notas de Fondo son pachulí, ámbar negro y palo de rosa de Brasil.",
+        price: 18.255,
         stock: 50 
     },
     {
