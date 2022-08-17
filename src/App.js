@@ -7,7 +7,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <Header/>
-            <Main uno={true} dos={1} tres={"Horacio"}/>
+            <Main/>
             <Footer/>
         </BrowserRouter>
     )
