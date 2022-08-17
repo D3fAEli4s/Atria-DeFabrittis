@@ -1,25 +1,28 @@
+import { Link, NavLink } from "react-router-dom";
 import CardWidget from "./CardWidget";
 
 const NavBar = ({type}) => {
 
-    if(type == "header"){
+    if(type === "header"){
       return (
         <nav className="navHeader">
-            <a href="#">
+            <Link to="/">
                 <img src="img/atriaicon.svg" alt="atriaLogo" className="atriaLogo"/>
-            </a>
+            </Link>
             <ul className="ulNav">
                 <li>
-                    <a href="#" className="enlacesNavBar">Inicio</a>
+                    <NavLink as={Link} to="/category/pacoRabanne" className="enlacesNavBar">Paco Rabanne</NavLink>
                 </li>
                 <li>
-                    <a href="#" className="enlacesNavBar">Tienda</a>
+                    <NavLink as={Link} to="/category/ralphLauren" className="enlacesNavBar">Ralph Lauren</NavLink>
                 </li>
                 <li>
-                    <a href="#" className="enlacesNavBar">Contacto</a>
+                    <NavLink as={Link} to="/category/armani" className="enlacesNavBar">Armani</NavLink>
                 </li>
             </ul>
-            <CardWidget/>
+            <NavLink to="/cart">
+                <CardWidget/>
+            </NavLink>
         </nav>
       )
     }else{
@@ -27,13 +30,13 @@ const NavBar = ({type}) => {
         <nav className="navHeader">
             <ul className="ulNav">
                 <li>
-                    <a href="#" className="enlacesNavBar">Inicio</a>
+                    <Link to="/pacoRabanne" className="enlacesNavBar">Inicio</Link>
                 </li>
                 <li>
-                    <a href="#" className="enlacesNavBar">Tienda</a>
+                    <Link to="/ralphLauren" className="enlacesNavBar">Tienda</Link>
                 </li>
                 <li>
-                    <a href="#" className="enlacesNavBar">Contacto</a>
+                    <Link to="/armani" className="enlacesNavBar">Contacto</Link>
                 </li>
             </ul>
         </nav>

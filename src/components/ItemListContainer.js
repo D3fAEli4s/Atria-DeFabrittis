@@ -1,26 +1,34 @@
 import { customFetch } from '../assets/customFetch';
 import { useState, useEffect } from 'react';
-import { products } from '../assets/productos';
+import { useParams } from 'react-router-dom';
 import { ItemList } from './ItemList';
+import { products } from "../assets/productos";
 
 const ItemListContainer = (greeting) => {
 
   const [listProducts, setListProducts] = useState([])
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    customFetch(products)
+  const {id} = useParams()
+    useEffect(()=>{
+        setLoading(true)
+        customFetch(products)
         .then(data => {
-          setLoading(true)
-          setListProducts(data)
+            if(id){
+                setLoading(false)
+                setListProducts(data.filter(item=>item.categoria===id))
+            }else{
+                setLoading(false)
+                setListProducts(data)
+            }
         })
-  }, [])
+    },[id])
 
   return (
     <>
       <h2 className="text-center mt-5">Bienvenido {greeting.nombre}</h2>
-      {!loading && <h5 className="text-center">Cargando...</h5>}
-      {loading && <ItemList listProducts={listProducts}/>} 
+      {loading && <h5 className="text-center">Cargando...</h5>}
+      {!loading && <ItemList listProducts={listProducts}/>} 
     </>
   )
 }
