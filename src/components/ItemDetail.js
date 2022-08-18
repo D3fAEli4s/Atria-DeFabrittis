@@ -1,6 +1,12 @@
+import { ItemCount } from "./ItemCount";
+import { useState } from "react";
+
 const ItemDetail = ({listProduct}) => {
 
-  console.log(listProduct)
+  const [numero, setNumero] = useState(0)
+  const onAdd = (quantityToAdd)=>{
+    setNumero(numero)
+}
 
   return (
     <>
@@ -12,7 +18,7 @@ const ItemDetail = ({listProduct}) => {
             <p>{listProduct.description}</p>
             <p>${listProduct.price}</p>
             <p>Stock: {listProduct.stock}</p>
-            <a href="#" className="btn btn-primary w-25 my-2">Comprar</a>
+            <ItemCount initial={0} stock={listProduct.stock} onAdd={onAdd}/>
           </div>
         </div>
       </div>

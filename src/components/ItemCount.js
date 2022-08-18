@@ -1,6 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
+
+  const agregarCarrito = ()=>{
+    onAdd(contador)
+}
 
   const [contador, setContador] = useState(initial);
 
@@ -9,16 +14,15 @@ const ItemCount = ({stock, initial}) => {
   const disminuirContador = () => contador>initial && setContador(contador - 1);
 
   return (
-    <div contador={contador} className="cardContador">
-      <p>Black XS Paco Rabanne</p>
-      <div className="contenedorContador">
+    <div contador={contador}>
+      <div>
         <i className="bi bi-dash-lg fs-4 ms-3 text-primary" onClick={disminuirContador}></i>
         <text className="px-5 fs-4 contador">{contador}</text>
         <i className="bi bi-plus-lg fs-4 me-3 text-primary" onClick={aumentarContador}></i>
       </div>
-        <button className="btn btn-primary mt-3 px-5">Agregar al Caritto</button>
+      <Link to="/cart" className="btn btn-primary mt-3 px-5" onClick={agregarCarrito}>Agregar al Caritto</Link>
     </div>
   )
 }
 
-export default ItemCount
+export { ItemCount }
