@@ -28,15 +28,15 @@ const NavBar = ({type}) => {
     }else{
       return (
         <nav className="navHeader">
-            <ul className="ulNav">
+            <ul className="ulFooter">
                 <li>
-                    <Link to="/pacoRabanne" className="enlacesNavBar">Inicio</Link>
+                    <NavLink as={Link} to="/category/pacoRabanne" className="enlacesNavBar">Paco Rabanne</NavLink>
                 </li>
                 <li>
-                    <Link to="/ralphLauren" className="enlacesNavBar">Tienda</Link>
+                    <NavLink as={Link} to="/category/ralphLauren" className="enlacesNavBar">Ralph Lauren</NavLink>
                 </li>
                 <li>
-                    <Link to="/armani" className="enlacesNavBar">Contacto</Link>
+                    <NavLink as={Link} to="/category/armani" className="enlacesNavBar">Armani</NavLink>
                 </li>
             </ul>
         </nav>

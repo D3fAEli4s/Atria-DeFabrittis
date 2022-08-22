@@ -14,7 +14,7 @@ export const products = [
         product: "PACO RABANNE INVICTUS",
         categoria: "pacoRabanne",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 17.600,
+        price: 17.605,
         stock: 30 
     },
     {
@@ -23,7 +23,7 @@ export const products = [
         product: "RALPH LAUREN POLO BLUE",
         categoria: "ralphLauren",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 21.590,
+        price: 21.595,
         stock: 40 
     },
     {
@@ -32,7 +32,7 @@ export const products = [
         product: "RALPH LAUREN POLO RED",
         categoria: "ralphLauren",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 21.590,
+        price: 21.595,
         stock: 60 
     },
     {
@@ -41,7 +41,7 @@ export const products = [
         product: "ARMANI STRONGER WITH YOU",
         categoria: "armani",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 19.790,
+        price: 19.795,
         stock: 60 
     },
     {
@@ -50,7 +50,7 @@ export const products = [
         product: "ARMANI ACQUA DI GIO HOMME",
         categoria: "armani",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 27.990,
+        price: 27.995,
         stock: 80 
     },
 

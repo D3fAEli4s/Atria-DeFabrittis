@@ -23,7 +23,7 @@ p , a{
     .navHeader .ulNav {
         display: flex;
         margin-bottom: 0;
-        padding-right: 11%;
+        padding-right: 9.5%;
     }
 
         .navHeader .ulNav > li {
@@ -62,3 +62,17 @@ p , a{
 .atriaLogo {
     width: 225px;
 }
+
+.loading {
+    margin: 2% 48.2%;
+}
+
+.ulFooter {
+    display: flex;
+    margin-bottom: 0;
+}
+
+    .ulFooter > li {
+        margin: 1em;
+        list-style: none;
+    }

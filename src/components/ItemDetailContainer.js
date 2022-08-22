@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ItemDetail } from "./ItemDetail";
+import SyncLoader from "react-spinners/SyncLoader";
 import { customFetch } from '../assets/customFetch';
 import { products } from '../assets/productos';
 import { useParams } from 'react-router-dom';
@@ -23,7 +24,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      {!loading ? <ItemDetail listProduct={listProduct}/> : <h5 className="text-center">Cargando...</h5> }
+      {!loading ? <ItemDetail listProduct={listProduct}/> : <SyncLoader className="loading" color="#e4ae7e"/> }
     </>
   )
 }

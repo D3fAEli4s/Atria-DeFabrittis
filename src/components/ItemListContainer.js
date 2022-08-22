@@ -1,5 +1,6 @@
 import { customFetch } from '../assets/customFetch';
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
+import SyncLoader from "react-spinners/SyncLoader";
 import { useParams } from 'react-router-dom';
 import { ItemList } from './ItemList';
 import { products } from "../assets/productos";
@@ -27,7 +28,7 @@ const ItemListContainer = (greeting) => {
   return (
     <>
       <h2 className="text-center mt-5">Bienvenido {greeting.nombre}</h2>
-      {loading && <h5 className="text-center">Cargando...</h5>}
+      {loading && <SyncLoader className="loading" color="#e4ae7e"/>}
       {!loading && <ItemList listProducts={listProducts}/>} 
     </>
   )

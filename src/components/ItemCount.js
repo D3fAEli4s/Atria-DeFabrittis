@@ -13,6 +13,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
   const disminuirContador = () => contador>initial && setContador(contador - 1);
 
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => {
+    setClick(true)
+  }
+
   return (
     <div contador={contador}>
       <div>
@@ -20,9 +26,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <text className="px-5 fs-4 contador">{contador}</text>
         <i className="bi bi-plus-lg fs-4 me-3 text-primary" onClick={aumentarContador}></i>
       </div>
-      <Link to="/cart" className="btn btn-primary mt-3 px-5" onClick={agregarCarrito}>Agregar al Caritto</Link>
+      {!click ? <button className="btn btn-primary mt-3 px-5" onClick={handleClick}>Agregar al Carrito</button> : <Link to="/cart" className="btn btn-primary mt-3 px-5" onClick={agregarCarrito}>Finalizar compra</Link>}
     </div>
   )
+  
 }
 
 export { ItemCount }
