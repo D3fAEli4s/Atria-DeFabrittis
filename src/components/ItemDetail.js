@@ -1,11 +1,18 @@
 import { ItemCount } from "./ItemCount";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "./CartContext";
 
 const ItemDetail = ({listProduct}) => {
 
   const [numero, setNumero] = useState(0)
-  const onAdd = (quantityToAdd)=>{
+
+  const{isInCart, addItem} = useContext(CartContext)
+
+  const onAdd = (qty)=>{
     setNumero(numero)
+    alert(`agrego ${qty} productos`)
+    isInCart(listProduct.id)
+    addItem(listProduct, qty)
 }
 
   return (
