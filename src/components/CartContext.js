@@ -17,7 +17,6 @@ const MyProvider = ({children}) => {
       ...item,
       qty
     }
-    console.log(qty)
 
     if (isInCart(newItem.id)) {
       const findProduct = cart.find(x => x.id === newItem.id)

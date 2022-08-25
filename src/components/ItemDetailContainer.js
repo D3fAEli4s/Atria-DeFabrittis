@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { ItemDetail } from "./ItemDetail";
-import SyncLoader from "react-spinners/SyncLoader";
 import { customFetch } from '../assets/customFetch';
 import { products } from '../assets/productos';
 import { useParams } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const ItemDetailContainer = () => {
 
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      {!loading ? <ItemDetail listProduct={listProduct}/> : <SyncLoader className="loading" color="#e4ae7e"/> }
+      {!loading ? <ItemDetail listProduct={listProduct}/> : <CircularProgress className='loading' color="inherit"/>}
     </>
   )
 }

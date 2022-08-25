@@ -1,3 +1,5 @@
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Badge } from '@mui/material'
 import { useContext } from "react"
 import { CartContext } from "./CartContext"
 
@@ -7,9 +9,11 @@ function CartWidget () {
     const {getItemQty} = useContext(CartContext)
 
     return (
-        <button className="btn btn-sm fs-3 text-light" badgeContent = {getItemQty()}>
-            <i className="bi bi-bag-plus"></i>
-        </button>
+        <>
+            <Badge badgeContent={getItemQty()} className="colorCart">
+                <ShoppingCartIcon />
+            </Badge>
+        </>
     )
 }
 
