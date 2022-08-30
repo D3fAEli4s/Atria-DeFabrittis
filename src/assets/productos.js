@@ -5,7 +5,7 @@ export const products = [
         product: "PACO RABANNE BLACK XS",
         categoria: "pacoRabanne",
         description: "La fragancia de Paco Rabanne nos brinda una inyección de insolencia y provocación, un aura de viribilidad y transgresión. Una fragancia oriental amaderada que mezcla el contraste entre la refrescante acidez del limón y la dulzura golosa del praliné empapado en pachuli. Las Notas de Salida son salvia y limón (lima ácida); las Notas de Corazón son bálsamo de Tolú, cardamomo negro, canela y praliné; las Notas de Fondo son pachulí, ámbar negro y palo de rosa de Brasil.",
-        price: 18.255,
+        price: 18250,
         stock: 50 
     },
     {
@@ -14,7 +14,7 @@ export const products = [
         product: "PACO RABANNE INVICTUS",
         categoria: "pacoRabanne",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 17.605,
+        price: 17600,
         stock: 30 
     },
     {
@@ -23,7 +23,7 @@ export const products = [
         product: "RALPH LAUREN POLO BLUE",
         categoria: "ralphLauren",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 21.595,
+        price: 21590,
         stock: 40 
     },
     {
@@ -32,7 +32,7 @@ export const products = [
         product: "RALPH LAUREN POLO RED",
         categoria: "ralphLauren",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 21.595,
+        price: 21590,
         stock: 60 
     },
     {
@@ -41,7 +41,7 @@ export const products = [
         product: "ARMANI STRONGER WITH YOU",
         categoria: "armani",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 19.795,
+        price: 19790,
         stock: 60 
     },
     {
@@ -50,7 +50,7 @@ export const products = [
         product: "ARMANI ACQUA DI GIO HOMME",
         categoria: "armani",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint inventore, quis laborum illum soluta quam. Quibusdam non et dicta provident accusamus. Nostrum nam labore debitis illum sit placeat aspernatur?",
-        price: 27.995,
+        price: 27990,
         stock: 80 
     },
 

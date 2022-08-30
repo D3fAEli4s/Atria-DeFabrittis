@@ -25,7 +25,7 @@ const ItemDetail = ({listProduct}) => {
             <p>{listProduct.description}</p>
             <p>${listProduct.price}</p>
             <p>Stock: {listProduct.stock}</p>
-            <ItemCount initial={0} stock={listProduct.stock} onAdd={onAdd}/>
+            <ItemCount initial={1} stock={listProduct.stock} onAdd={onAdd}/>
           </div>
         </div>
       </div>

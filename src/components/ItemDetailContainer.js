@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { ItemDetail } from "./ItemDetail";
-import { customFetch } from '../assets/customFetch';
-import { products } from '../assets/productos';
 import { useParams } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
+import { db } from '../firebase.js'
+import { collection, getDoc, doc } from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
 
@@ -13,18 +13,27 @@ const ItemDetailContainer = () => {
 
   
 
-  useEffect(() => {
-    setLoading(true)
-    customFetch(products)
-        .then(res => {
-          setLoading(false)
-          setListProduct(res.find(item => item.id == id ))
-        })
-  }, [id])
+  useEffect(()=>{
+    const productsCollection = collection(db, "ItemCollection")
+    const reference = doc(productsCollection,id)
+    const consulta = getDoc(reference)
+
+    consulta 
+    .then((res)=>{
+        const producto = res.data()
+        producto.id = id
+        setListProduct(producto)
+        setLoading(true)
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+
+},[id])
 
   return (
     <>
-      {!loading ? <ItemDetail listProduct={listProduct}/> : <CircularProgress className='loading' color="inherit"/>}
+      {loading ? <ItemDetail listProduct={listProduct}/> : <CircularProgress className='loading' color="inherit"/>}
     </>
   )
 }
