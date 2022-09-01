@@ -5,7 +5,7 @@ const Item = ({ product }) => {
   return (
     <>
       <article className="d-flex justify-content-center">
-          <div className="card w-50 my-5">
+          <div className="card w-50 my-5 shadow-lg border-0">
           <img src={product.image} alt="as" className="card-img-top" />
             <div className="card-body text-center">
                 {product.product} 

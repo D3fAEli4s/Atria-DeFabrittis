@@ -11,8 +11,6 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(false)
   const { id } = useParams()
 
-  
-
   useEffect(()=>{
     const productsCollection = collection(db, "ItemCollection")
     const reference = doc(productsCollection,id)

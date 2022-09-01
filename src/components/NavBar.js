@@ -5,7 +5,7 @@ const NavBar = ({type}) => {
 
     if(type === "header"){
       return (
-        <nav className="navHeader">
+        <nav className="navHeader shadow-lg">
             <Link to="/">
                 <img src="img/atriaicon.svg" alt="atriaLogo" className="atriaLogo"/>
             </Link>

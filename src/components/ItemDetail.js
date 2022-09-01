@@ -18,7 +18,7 @@ const ItemDetail = ({listProduct}) => {
   return (
     <>
       <div className="d-flex justify-content-center">
-        <div className="card w-25 my-5">
+        <div className="card w-25 my-5 shadow-lg border-0">
           <img src={listProduct.image} alt="asd" className="card-img-top"/>
           <div className="card-body text-center">
             <h5>{listProduct.product}</h5>

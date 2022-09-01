@@ -14,7 +14,6 @@ p , a{
 
 .navHeader {
     background-color: #73726F;
-    box-shadow: 0.0.5em 1em rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: space-around;
     align-items: center;
