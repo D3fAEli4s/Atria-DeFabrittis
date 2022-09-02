@@ -7,9 +7,19 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 p , a{
     color: #000;
     font-size: 1.4em;
+}
+
+body {
+    position: relative;
+    padding-bottom: 5em;
+    min-height: 100%;
 }
 
 .navHeader {
@@ -90,4 +100,14 @@ p , a{
 
 .backgroundColorCard {
     background-color: #73726F;
+}
+
+#rowProducts {
+    overflow-x: hidden;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 
 function Checkout() {
 
-  const [submit, setSubmit] = useState(false)
+  const [setSubmit] = useState(false)
   const [costumer, setCostumer] = useState({
 
     name: '',

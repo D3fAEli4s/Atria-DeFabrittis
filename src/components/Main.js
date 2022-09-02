@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 const Main = () => {
   
   return (
-    <main>
+    <main id="rowProducts">
         <Routes> 
           <Route path="/" element={<ItemListContainer test={true} nombre="Alguien"/>}/>
           <Route path="/category/:id" element={<ItemListContainer/>}/>
