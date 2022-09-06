@@ -32,13 +32,21 @@ body {
     .navHeader .ulNav {
         display: flex;
         margin-bottom: 0;
-        padding-right: 9.5%;
+        padding-left: 0;
     }
 
         .navHeader .ulNav > li {
             margin: 1em;
             list-style: none;
         }
+
+.navCancelar {
+    display: none; 
+}
+
+.navLabel, .navInput {
+    display: none; 
+}
 
 .enlacesNavBar {
     text-decoration: none;
@@ -70,25 +78,38 @@ body {
 
 .atriaLogo {
     width: 225px;
+    margin-left: 0.5em;
+    padding-right: 1.5em;
 }
 
 .loading {
-    margin: 2% 48.7%;
+    position: absolute;
+    top: 48.7%;
+    left: 48.7%;
+    transform: translate(-48.7%, -48.7);
     color: #e4ae7e;
 }
 
-.ulFooter {
+#ulFooter {
     display: flex;
     margin-bottom: 0;
+    padding-left: 0;
 }
 
-    .ulFooter > li {
+    #ulFooter > li {
         margin: 1em;
         list-style: none;
     }
 
 .colorCart {
     color: #e4ae7e;
+    width: 225px;
+    justify-content: center;
+}
+
+.colorCart > span {
+    right: 98px;
+    top: -5px;
 }
 
 .colorCart > span {
@@ -106,8 +127,148 @@ body {
     overflow-x: hidden;
 }
 
+.btnColor {
+    background-color: #73726F;
+    color: #fff;
+    text-align: center;
+    text-decoration:none;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7em 1.2em;
+    font-size: 1.1em;
+    line-height: inherit;
+    transition: 0.3s;
+}
+
+.btnColorAgregar {
+    background-color: #73726F;
+    color: #fff;
+    text-align: center;
+    text-decoration:none;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4em 1.2em;
+    font-size: 1.1em;
+    line-height: inherit;
+    transition: 0.3s;
+}
+
+.btnColor:hover {
+    background-color: #e4ae7e;
+    color: #fff;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+@media only screen and (max-width: 1013px) {
+
+    body {
+        padding-bottom: 10em;
+    }
+
+    .navHeader {
+        flex-direction: column;
+    }
+
+    .colorCart {
+        padding: 0.3em 0 0.7em 0;
+    }
+
+    .atriaLogo {
+        padding-top: 0.7em;
+    }
+
+    .colorCart > span {
+        top: 2px;
+    }
+}
+
+@media only screen and (max-width: 544px) {
+
+    body {
+        padding-bottom: 17em;
+    }
+
+    #ulFooter {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0 0 0;
+    }
+
+    #ulFooter > li {
+        margin: 0 1em;
+        margin-bottom: 1em;
+    }
+
+    .footer > .navHeader {
+        flex-direction: column;
+        padding: 1em 0 0 0;
+    }
+    
+    .navHeader {
+        flex-direction: row;
+    }
+    
+    .navLabel {
+        display: block;
+        cursor: pointer;
+        order: -1;
+        padding-top: 0.4em;
+        color: #e4ae7e; 
+    }
+    .navCancelar {
+        display: block;
+        color: #e4ae7e;
+        padding: 10px 0 0 10px;
+    }
+        .navCancelar .navLabel {
+            margin: 0; 
+        }
+    .navMenu {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(to top, #e4ae7e, #73726F);
+        width: 100%;
+        left: 0;
+        justify-content: flex-start;
+        align-items: baseline;
+        flex-direction: column;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 0.5s ease-in-out; 
+    }
+        .navInput:checked + .navMenu {
+            clip-path: inset(0 28% 0 0); 
+        }
+
+        .navHeader .ulNav > li {
+            margin-left: 0.5em;
+        }
+
+    .atriaLogo {
+        width: 180px;
+        padding-top: 0;
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    .colorCart {
+        width: auto;
+        padding: 0;
+    }
+
+        .colorCart > span {
+            top: -3px;
+            left: 8px;
+        }
+
+    .btnColor {
+        padding: 0.5em 1em;
+        font-size: 0.9em;
+    }
 }

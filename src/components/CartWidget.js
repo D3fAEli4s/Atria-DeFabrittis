@@ -10,7 +10,7 @@ function CartWidget () {
 
     return (
         <>
-            <Badge badgeContent={getItemQty()} className="colorCart">
+            <Badge badgeContent={getItemQty()} className="colorCart me-2">
                 <ShoppingCartIcon />
             </Badge>
         </>

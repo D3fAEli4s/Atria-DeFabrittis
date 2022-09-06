@@ -17,12 +17,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
   return (
     <div contador={contador}>
-      <div>
+      <div className="mb-4">
         <i className="bi bi-dash-lg fs-4 ms-3 text-primary" onClick={disminuirContador}></i>
         <text className="px-5 fs-4 contador">{contador}</text>
         <i className="bi bi-plus-lg fs-4 me-3 text-primary" onClick={aumentarContador}></i>
       </div>
-      {!click ? <button className="btn btn-primary mt-3 px-5" onClick={agregarCarrito}>Agregar al Carrito</button> : <Link to="/cart" className="btn btn-primary mt-3 px-5">Finalizar compra</Link>}
+      {!click ? <button className="btnColorAgregar px-5" onClick={agregarCarrito}>Agregar al Carrito</button> : <Link to="/cart" className="btnColor px-5">Finalizar compra</Link>}
     </div>
   )
   
