@@ -50,7 +50,7 @@ function Cart() {
 
   return (
     <div className='text-center'>
-      <h2 className='fs-1 py-5'>Hola soy el carrito</h2>
+      <h2 className='fs-1 py-5'>El carrito esta vacio :(</h2>
       <Link to={'/'}><button className='btn btn-success mb-5'>Ir al Inicio</button></Link>
     </div>
   )

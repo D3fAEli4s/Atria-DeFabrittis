@@ -3,6 +3,7 @@ import { CartContext } from './CartContext'
 import { db } from '../firebase.js'
 import{serverTimestamp, collection, addDoc} from 'firebase/firestore'
 import swal from 'sweetalert';
+import { Formulario, Input } from "./Formularios";
 
 function Checkout() {
 
@@ -13,6 +14,7 @@ function Checkout() {
     lastname: '',
     phone: '',
     email: '',
+    email2: '',
     address: '',
 
   })
@@ -24,6 +26,19 @@ function Checkout() {
         ...costumer,
         [e.target.name]: e.target.value,
     })
+  }
+
+  let btn = document.querySelector("#btnFinalizar")
+
+  const validacionDeEmails = () => {
+    if (costumer.email !== costumer.email2) {
+        console.log("los emails no son iguales")
+        btn.disabled = true
+    }
+    else if (costumer.email && costumer.email2) {
+        console.log("los emails son iguales")
+        btn.disabled = false
+    }
   }
 
   const handlerSubmit = (e) => {
@@ -84,35 +99,40 @@ function Checkout() {
   return (
         <div className='col-xl-8'>
             <h2>Complete Tus datos</h2>
-            <form onSubmit={handlerSubmit}>
-                <input placeholder='Nombre'
+            <Formulario onSubmit={handlerSubmit}>
+                <Input placeholder='Nombre'
                 name='name'
                 value={costumer.name}
                 onChange={handlerChangeInput} 
                 />
-                <input placeholder='Apellido'
+                <Input placeholder='Apellido'
                 name='lastname'
                 value={costumer.lastname}
                 onChange={handlerChangeInput} 
                 />
-                <input placeholder='Numero'
+                <Input placeholder='Numero'
                 name='phone'
                 value={costumer.phone}
                 onChange={handlerChangeInput} 
                 />
-                <input placeholder='Correo Electrónico' 
+                <Input placeholder='Correo Electrónico' 
                 name='email'
                 value={costumer.email}
                 onChange={handlerChangeInput}
                 />
-                <input placeholder='Domicilio'
+                <Input placeholder='Confirmar Correo Electrónico' 
+                name='email2'
+                value={costumer.email2}
+                onChange={handlerChangeInput}
+                validacionDeEmails={validacionDeEmails()}
+                />
+                <Input placeholder='Domicilio'
                 name='address'
                 value={costumer.address}
                 onChange={handlerChangeInput} 
                 />
-
-            <button onClick={submitOrder} type='submit' className='btn btn-success'>Confirmar Compra!</button>
-            </form>
+            <button onClick={submitOrder} type='submit'  id="btnFinalizar" className='btn btn-success'>Confirmar Compra!</button>
+            </Formulario>
         </div>
   )
 }
