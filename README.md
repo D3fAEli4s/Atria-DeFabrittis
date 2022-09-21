@@ -22,4 +22,4 @@ Para mi proyecto utilicé lo siguente:
 - Base de dato: Firebase
 La totalidad del proyecto se realizó en React.
 
-La pagina esta alojada en ###Vercel dejo en link: https://atria-nu.vercel.app/
+La pagina esta alojada en Vercel dejo el link: https://atria-nu.vercel.app/
